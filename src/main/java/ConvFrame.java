@@ -20,7 +20,7 @@ public class ConvFrame extends JFrame {
 
     private int edit = 0;
 
-    private int offset;
+    private final int offset;
 
     public ConvFrame() throws HeadlessException {
         this.getContentPane().setPreferredSize(new Dimension(WIDTH, HEIGHT));
@@ -474,17 +474,14 @@ public class ConvFrame extends JFrame {
 
         @Override
         public void componentMoved(ComponentEvent e) {
-
         }
 
         @Override
         public void componentShown(ComponentEvent e) {
-
         }
 
         @Override
         public void componentHidden(ComponentEvent e) {
-
         }
     }
 
@@ -492,17 +489,15 @@ public class ConvFrame extends JFrame {
     class KeyUpdater implements KeyListener {
         @Override
         public void keyTyped(KeyEvent e) {
-
         }
 
         @Override
         public void keyPressed(KeyEvent e) {
-
         }
 
         @Override
         public void keyReleased(KeyEvent e) {
-            if (e.getKeyCode() == KeyEvent.VK_MINUS || e.getKeyCode() == KeyEvent.VK_PLUS || e.getKeyCode() == KeyEvent.VK_0 || e.getKeyCode() == KeyEvent.VK_1 || e.getKeyCode() == KeyEvent.VK_2 || e.getKeyCode() == KeyEvent.VK_3 || e.getKeyCode() == KeyEvent.VK_4 || e.getKeyCode() == KeyEvent.VK_5 || e.getKeyCode() == KeyEvent.VK_6 || e.getKeyCode() == KeyEvent.VK_7 || e.getKeyCode() == KeyEvent.VK_8 || e.getKeyCode() == KeyEvent.VK_9 || e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_B || e.getKeyCode() == KeyEvent.VK_C || e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_E || e.getKeyCode() == KeyEvent.VK_F || e.getKeyCode() == KeyEvent.VK_V) {
+            if (e.getKeyCode() == KeyEvent.VK_BACK_SPACE ||e.getKeyCode() == KeyEvent.VK_MINUS || e.getKeyCode() == KeyEvent.VK_PLUS || e.getKeyCode() == KeyEvent.VK_0 || e.getKeyCode() == KeyEvent.VK_1 || e.getKeyCode() == KeyEvent.VK_2 || e.getKeyCode() == KeyEvent.VK_3 || e.getKeyCode() == KeyEvent.VK_4 || e.getKeyCode() == KeyEvent.VK_5 || e.getKeyCode() == KeyEvent.VK_6 || e.getKeyCode() == KeyEvent.VK_7 || e.getKeyCode() == KeyEvent.VK_8 || e.getKeyCode() == KeyEvent.VK_9 || e.getKeyCode() == KeyEvent.VK_A || e.getKeyCode() == KeyEvent.VK_B || e.getKeyCode() == KeyEvent.VK_C || e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_E || e.getKeyCode() == KeyEvent.VK_F || e.getKeyCode() == KeyEvent.VK_V) {
                 update();
             }
         }
@@ -513,4 +508,3 @@ public class ConvFrame extends JFrame {
         new ConvFrame();
     }
 }
-
